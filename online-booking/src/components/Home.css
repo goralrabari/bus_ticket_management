@@ -88,8 +88,8 @@ h1 {
 
 .book-now-btn {
   margin-top: 50px;
-  padding: 18px 70px;           /* ← મીડિયમ સાઇઝ – ખૂબ જ સુંદર */
-  font-size: 1.75rem;           /* ← મોટું પણ નહીં, નાનું પણ નહીં */
+  padding: 18px 70px;           
+  font-size: 1.75rem;           
   font-weight: bold;
   background: linear-gradient(135deg, #e74c3c, #c0392b);
   color: white;
