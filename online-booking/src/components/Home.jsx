@@ -1,10 +1,9 @@
 import React from "react";
 import busImage from "../assets/image/bus.png";
-import { useNavigate } from "react-router-dom";
 import "./Home.css";
 
 export default function Home() {
-  const navigate = useNavigate();
+
   return (
     <div className="hero">
       <img src={busImage} alt="Bus" className="bg-image" />
@@ -27,7 +26,7 @@ export default function Home() {
     <div className="feature-text">24/7 Support</div>
   </div>
 </div>
-        <button className="book-now-btn" onClick={() => navigate("/search")}>
+        <button className="book-now-btn" >
           Book Ticket Now
         </button>
       </div>
