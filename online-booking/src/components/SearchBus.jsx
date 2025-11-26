@@ -1,6 +1,7 @@
-
 import React, { useState } from "react";
 import "./SearchBus.css";
+import busImage from "../assets/image/graybus.jpg";
+
 
 const SearchBus = () => {
   const [from, setFrom] = useState("");
@@ -13,18 +14,27 @@ const SearchBus = () => {
     e.preventDefault();
     if (!isFormValid) return;
 
-    // અહીં તમે API call અથવા navigation કરી શકો છો
-    // ઉદાહરણ:
-    // navigate(`/results?from=${encodeURIComponent(from)}&to=${encodeURIComponent(to)}&date=${date}`);
-
     alert(`Searching buses:
 From: ${from}
 To: ${to}
 Date: ${date || "Not selected"}`);
   };
 
+  // 👇 return must be inside the function
   return (
     <div className="searchbus-container">
+      {/* Left side image */}
+      <div
+  className="searchbus-left"
+  style={{
+    backgroundImage: `url(${busImage})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+  }}
+></div>
+
+
+      {/* Right side form */}
       <form className="searchbus-card" onSubmit={handleSubmit} noValidate>
         <h1 className="title">Search Bus</h1>
 
@@ -68,7 +78,7 @@ Date: ${date || "Not selected"}`);
             value={date}
             onChange={(e) => setDate(e.target.value)}
             className="input"
-            min={new Date().toISOString().split("T")[0]} // આજ પછીની તારીખ allow
+            min={new Date().toISOString().split("T")[0]}
           />
         </div>
 
