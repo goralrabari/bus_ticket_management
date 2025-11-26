@@ -1,0 +1,112 @@
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+  overflow-y: auto;
+}
+
+/* Container */
+.bus-booking {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
+.header {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.header .date {
+  font-size: 18px;
+  margin-top: 8px;
+  font-weight: 500;
+}
+
+/* Bus List - Row Layout */
+.bus-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Bus Row */
+.bus-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  border-radius: 8px;
+  padding: 15px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.bus-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Left Info */
+.bus-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.bus-info h2 {
+  font-size: 20px;
+  color: #007bff;
+}
+
+.bus-info p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Right Button */
+.select-seat {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.select-seat:hover {
+  background: #0056b3;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .bus-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .select-seat {
+    width: 100%;
+  }
+}
